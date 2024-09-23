@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:layout_margin="8dp"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/ivTransaction"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:padding="1dp"
+        android:background="@drawable/category_bg"
+        android:src="@drawable/ic_transaction"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/transactionLabel"
+        app:tint="@color/white_app" />
+
+    <TextView
+        android:id="@+id/transactionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:text="Business"
+        android:layout_marginStart="4dp"
+        android:textColor="@color/text_color"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/transactionDate"
+        app:layout_constraintStart_toEndOf="@id/ivTransaction"
+        app:layout_constraintTop_toTopOf="@id/ivTransaction" />
+    <TextView
+        android:id="@+id/transactionDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:text="DATE"
+        android:textColor="@color/text_color"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/transactionLabel"
+        app:layout_constraintBottom_toBottomOf="@id/ivTransaction"
+        app:layout_constraintStart_toStartOf="@id/transactionLabel"
+        />
+
+
+    <TextView
+        android:id="@+id/transactionAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/transactionLabel"
+        android:text="19,500"
+        android:textColor="@color/text_color"
+        android:textSize="12sp"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@id/transactionDate"
+        android:layout_marginEnd="5dp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

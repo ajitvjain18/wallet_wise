@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_el">
+
+        <FrameLayout
+            android:id="@+id/tips"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="gone"
+            android:layout_height="0dp" />
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            android:layout_marginStart="@dimen/dp_12"
+            android:layout_marginTop="@dimen/dp_16"
+            android:alpha="0.5"
+            android:src="@drawable/arrow_left"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/el_selected_text_color" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivProfilePhoto"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginVertical="@dimen/dp_08"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/explogo"
+            app:layout_constraintStart_toEndOf="@id/ivBack"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_16"
+            android:layout_marginStart="@dimen/sp_12"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Ajit Jain"
+            android:textColor="@color/el_selected_text_color"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintStart_toEndOf="@id/ivProfilePhoto"
+            app:layout_constraintTop_toTopOf="@id/ivProfilePhoto" />
+
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_16"
+            android:fontFamily="@font/roboto_medium"
+            android:text="ajitjain016@gmail.com"
+            android:textColor="#7E7F80"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintBottom_toBottomOf="@id/ivProfilePhoto"
+            app:layout_constraintStart_toStartOf="@id/tvName" />
+
+        <View
+            android:id="@+id/splitter"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:layout_marginHorizontal="@dimen/dp_16"
+            android:layout_marginTop="8dp"
+            android:background="@color/line_color"
+            app:layout_constraintTop_toBottomOf="@id/tvEmail" />
+
+        <include
+            android:id="@+id/menu"
+            layout="@layout/layout_menu_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/splitter" />
+
+
+        <ImageView
+            android:id="@+id/qr"
+            android:layout_width="wrap_content"
+            android:layout_height="600dp"
+            android:padding="@dimen/dp_16"
+            android:src="@drawable/qr"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/closeqr"
+            android:layout_width="@dimen/dp_32"
+            android:layout_height="@dimen/dp_32"
+            android:layout_marginBottom="@dimen/margin_8"
+            android:src="@drawable/close_ellipse_svgrepo_com"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/qr"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

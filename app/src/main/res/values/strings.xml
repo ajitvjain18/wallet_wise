@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Wallet Wise</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+    <string name="linkedin">https://www.linkedin.com/in/ajit-jain-054a6b91/</string>
+    <string name="sign_up_amp_get_started"><![CDATA[Sign Up & Get Started]]></string>
+    <string name="welcome">Welcome</string>
+    <string name="disclamer_login">We strongly recommend selecting a passcode that is memorable yet secure, and which you can recall easily. It is important to remember that this passcode will be integral to accessing your account and ensuring its security</string>
+</resources>

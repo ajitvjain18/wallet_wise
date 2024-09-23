@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single" >
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home_svgrepo_com"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/nav_restore"
+            android:icon="@drawable/restore_svgrepo_com"
+            android:title="Restore" />
+
+        <item
+            android:id="@+id/nav_export"
+            android:icon="@drawable/csv_svgrepo_com"
+            android:title="Export to excel" />
+
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/about_svgrepo_com"
+            android:title="About Us" />
+
+        <item
+            android:id="@+id/nav_donate"
+            android:icon="@drawable/donate_heart_svgrepo_com"
+            android:title="Donate" />
+
+
+
+    </group>
+
+</menu>

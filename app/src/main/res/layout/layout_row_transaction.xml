@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@color/background"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/ivTransaction"
+        android:layout_width="@dimen/dp_32"
+        android:layout_height="0dp"
+        android:background="@drawable/category_bg"
+        android:padding="5dp"
+        android:src="@drawable/ic_transaction"
+        app:layout_constraintBottom_toBottomOf="@id/accountLabel"
+        app:layout_constraintEnd_toStartOf="@id/transactionLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white_app" />
+
+
+    <TextView
+        android:id="@+id/transactionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:text="Business"
+        android:textColor="@color/text_color"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/ivTransaction"
+        app:layout_constraintTop_toTopOf="@id/ivTransaction" />
+
+    <TextView
+        android:id="@+id/accountLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:background="@drawable/accounts_bg"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:paddingHorizontal="5dp"
+        android:paddingVertical="2dp"
+        android:text="Cash"
+        android:textColor="@color/white_app"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@id/ivTransaction"
+        app:layout_constraintTop_toBottomOf="@id/transactionLabel" />
+
+    <TextView
+        android:id="@+id/transactionDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:text="20 March 2024"
+        android:textColor="#CC3B3F41"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="@id/accountLabel"
+        app:layout_constraintStart_toEndOf="@id/accountLabel"
+        app:layout_constraintTop_toTopOf="@id/accountLabel" />
+
+    <TextView
+        android:id="@+id/transactionAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="5dp"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
+        android:text="19,500"
+        android:textColor="@color/text_color"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/transactionDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/transactionLabel" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

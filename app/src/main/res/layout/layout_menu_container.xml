@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_el"
+        android:padding="@dimen/margin_16">
+
+        <TextView
+            android:id="@+id/tvHome"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_48"
+            android:drawablePadding="@dimen/margin_8"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center_vertical"
+            android:text="Home"
+            android:textColor="@color/el_selected_text_color"
+            android:textSize="@dimen/sp_16"
+            app:drawableStartCompat="@drawable/home_svgrepo_com"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvRestore"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_48"
+            android:drawablePadding="@dimen/margin_8"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center_vertical"
+            android:text="Restore"
+            android:layout_marginTop="@dimen/margin_4"
+            android:textColor="@color/el_selected_text_color"
+            android:textSize="@dimen/sp_16"
+            app:drawableStartCompat="@drawable/restore_svgrepo_com"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvHome" />
+
+        <TextView
+            android:id="@+id/tvExport"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_48"
+            android:drawablePadding="@dimen/margin_8"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/margin_4"
+            android:text="Export to excel"
+            android:textColor="@color/el_selected_text_color"
+            android:textSize="@dimen/sp_16"
+            app:drawableStartCompat="@drawable/csv_svgrepo_com"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvRestore" />
+
+        <TextView
+            android:id="@+id/tvAboutUs"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_48"
+            android:drawablePadding="@dimen/margin_8"
+            android:layout_marginTop="@dimen/margin_4"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center_vertical"
+            android:text="About US"
+            android:textColor="@color/el_selected_text_color"
+            android:textSize="@dimen/sp_16"
+            app:drawableStartCompat="@drawable/about_svgrepo_com"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvExport" />
+
+        <TextView
+            android:id="@+id/tvDonate"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_48"
+            android:drawablePadding="@dimen/margin_8"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center_vertical"
+            android:text="Donate"
+            android:layout_marginTop="@dimen/margin_4"
+            android:textColor="@color/el_selected_text_color"
+            android:textSize="@dimen/sp_16"
+            android:visibility="gone"
+            app:drawableStartCompat="@drawable/donate_heart_svgrepo_com"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvAboutUs" />
+
+        <CheckBox
+            android:id="@+id/cbSecure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@id/tvProtect"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvProtect"
+            app:layout_constraintTop_toTopOf="@id/tvProtect" />
+
+        <TextView
+            android:id="@+id/tvProtect"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_48"
+            android:drawablePadding="@dimen/margin_8"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center_vertical"
+            android:text="Enable Secure Login"
+            android:textColor="@color/el_selected_text_color"
+            android:textSize="@dimen/sp_16"
+            android:layout_marginTop="@dimen/margin_4"
+            app:drawableStartCompat="@drawable/security"
+            app:layout_constraintEnd_toStartOf="@id/cbSecure"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDonate" />
+
+
+        <TextView
+            android:id="@+id/tvTips"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_48"
+            android:layout_marginTop="@dimen/margin_4"
+            android:drawablePadding="@dimen/margin_8"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center_vertical"
+            android:text="Tips"
+            android:textColor="@color/el_selected_text_color"
+            android:textSize="@dimen/sp_16"
+            app:drawableStartCompat="@drawable/tips"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvProtect" />
+
+
+        <View
+            android:id="@+id/splitter1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:layout_marginBottom="@dimen/dp_16"
+            android:background="@color/line_color"
+            app:layout_constraintBottom_toTopOf="@+id/tvVersion"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <TextView
+            android:id="@+id/tvVersion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Wallet Wise Version ####"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintBottom_toTopOf="@id/tvCompany"
+            app:layout_constraintStart_toStartOf="@id/splitter1" />
+
+        <TextView
+            android:id="@+id/tvCompany"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_16"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Developed by Ajit Jain"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvVersion" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

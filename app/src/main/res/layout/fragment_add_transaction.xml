@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_bg"
+    tools:context=".Views.AddTransactionFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/incomeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/default_selector"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:text="Income"
+                android:textColor="@color/text_color"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/expenseButton"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/default_selector"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:text="Expense"
+                android:textColor="@color/text_color"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tlSelectDate"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:hint="Select Date"
+            app:hintTextColor="@color/text_color">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/selectDate"
+                style="@style/TextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_44"
+                android:focusable="false"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/text_color"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tlAmount"
+             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="@dimen/margin_16"
+            android:hint="Amount"
+            app:hintTextColor="@color/text_color">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/amount"
+                style="@style/TextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_44"
+                android:fontFamily="@font/roboto_medium"
+                android:inputType="number"
+                android:textColor="@color/text_color"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tlCateogry"
+             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="@dimen/margin_16"
+            android:focusable="false"
+            android:hint="Category"
+            app:hintTextColor="@color/text_color">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/categroy"
+                style="@style/TextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_44"
+                android:focusable="false"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/text_color"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tlAccount"
+             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="@dimen/margin_16"
+            android:focusable="false"
+            android:hint="Account"
+            app:hintTextColor="@color/text_color">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/account"
+                style="@style/TextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_44"
+                android:focusable="false"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/text_color"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tlNote"
+             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginBottom="8dp"
+            android:hint="Note"
+            app:hintTextColor="@color/text_color">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/note"
+                style="@style/TextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_44"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/text_color"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/saveButton"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_bg"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:text="SAVE"
+                android:textColor="@color/white_app" />
+
+            <TextView
+                android:id="@+id/cancelButton"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/default_selector"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:text="Cancel"
+                android:textColor="@color/text_color"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

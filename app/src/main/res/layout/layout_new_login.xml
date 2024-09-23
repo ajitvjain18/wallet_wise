@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_el">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="152dp"
+        android:layout_height="152dp"
+        android:layout_marginTop="@dimen/dp_64"
+        android:src="@drawable/explogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_28"
+        android:fontFamily="@font/poppins_light"
+        android:text="@string/welcome"
+        android:gravity="center"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/dp_30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivLogo" />
+
+    <TextView
+        android:id="@+id/tvSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_4"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:text="@string/sign_up_amp_get_started"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/dp_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvWelcome" />
+
+
+    <TextView
+        android:id="@+id/tvAccountDetails"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSignUp"
+        android:layout_marginTop="@dimen/dp_65"
+        android:text="Enter your account details"
+        android:layout_marginStart="@dimen/margin_16"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/text_color"
+        android:gravity="center"
+        android:layout_height="wrap_content" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tlName"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:hint="NAME"
+        android:layout_marginTop="@dimen/dp_28"
+        app:hintTextColor="@color/blue"
+        app:layout_constraintBottom_toTopOf="@id/tlemail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAccountDetails">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tvname"
+            style="@style/TextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_44"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/text_color"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tlemail"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:hint="EMAIL"
+        android:layout_marginTop="@dimen/dp_16"
+        app:hintTextColor="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tlName">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tvemail"
+            style="@style/TextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_44"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/text_color"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tlPassword"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:hint="CREATE NEW PASSCODE"
+        app:hintTextColor="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/dp_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tlemail">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tvpassword"
+            style="@style/TextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_44"
+            android:fontFamily="@font/roboto_medium"
+            android:inputType="numberPassword"
+            android:maxLength="4"
+            android:textColor="@color/text_color"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvInfo"
+        android:layout_width="@dimen/dp_0"
+        app:layout_constraintStart_toStartOf="@id/tlPassword"
+        app:layout_constraintEnd_toEndOf="@id/tlPassword"
+        app:layout_constraintTop_toBottomOf="@id/tlPassword"
+        android:layout_marginTop="@dimen/dp_12"
+        android:textSize="@dimen/sp_10"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="#D93B3F41"
+        android:text="@string/disclamer_login"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/saveButton"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/sp_10"
+        android:layout_marginTop="@dimen/margin_30"
+        android:layout_marginBottom="@dimen/dp_16"
+        android:background="@drawable/edittext_bg"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
+        android:text="NEXT"
+        android:textColor="@color/white_app"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/loginButton"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/sp_10"
+        android:layout_marginTop="@dimen/margin_30"
+        android:layout_marginBottom="@dimen/dp_16"
+        android:background="@drawable/edittext_bg"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
+        android:text="LOGIN"
+        android:visibility="gone"
+        android:textColor="@color/white_app"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
